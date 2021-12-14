@@ -42,7 +42,7 @@ export default async function print(
 ): Promise<void> {
   throwIfUnsupportedOperatingSystem();
   if (!pdf) throw "No PDF specified";
-  if (!fs.existsSync(pdf)) throw "No such file";
+  // if (!fs.existsSync(pdf)) throw "No such file";
 
   let sumatraPdf =
     options.sumatraPdfPath || path.join(__dirname, "SumatraPDF.exe");
